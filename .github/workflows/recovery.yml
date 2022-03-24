@@ -16,9 +16,9 @@ on:
 env:
   MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
   MANIFEST_BRANCH: fox_9.0
-  DEVICE: j4lte
-  DT_LINK: https://github.com/Johx22/android_device_samsung_j4lte
-  DT_PATH: device/samsung/j4lte
+  DEVICE: YT_X705F
+  DT_LINK: https://github.com/Johx22/android_device_lenovo_YT_X705F -b test
+  DT_PATH: device/lenovo/YT_X705F
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
