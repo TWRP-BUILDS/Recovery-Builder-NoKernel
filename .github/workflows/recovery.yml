@@ -14,11 +14,11 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
-  MANIFEST_BRANCH: fox_9.0
+  MANIFEST: https://git@github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git -b twrp-11
+  MANIFEST_BRANCH: twrp-11
   DEVICE: YT_X705F
-  DT_LINK: https://github.com/Johx22/android_device_lenovo_YT_X705F -b test
-  DT_PATH: device/lenovo/YT_X705F
+  DT_LINK: https://github.com/Johx22/device_oppo_OP4F2F
+  DT_PATH: device/oppo/OP4F2F
   TARGET: recoveryimage
   TZ: Asia/Kolkata
 
@@ -52,7 +52,6 @@ jobs:
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
-             git clone https://gitlab.com/OrangeFox/misc/theme bootable/recovery/gui/theme
 
        - name: Build
          run: |
