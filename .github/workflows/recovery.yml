@@ -51,7 +51,7 @@ jobs:
              cd work
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
-             git clone $DT_LINK --depth=1 --single-branch $DT_PATH
+             git clone $DT_LINK -b fox_11.0 --depth=1 --single-branch $DT_PATH
 
        - name: Build
          run: |
