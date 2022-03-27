@@ -15,7 +15,7 @@ on:
 
 env:
   MANIFEST: https://git@github.com/minimal-manifest-twrp/platform_manifest_twrp_omni.git
-  MANIFEST_BRANCH: twrp-10
+  MANIFEST_BRANCH: twrp-10-deprecated
   DEVICE: OP4F2F
   DT_LINK: https://github.com/Johx22/device_oppo_OP4F2F
   DT_PATH: device/oppo/OP4F2F
