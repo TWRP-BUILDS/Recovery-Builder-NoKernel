@@ -14,8 +14,8 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://git@github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
-  MANIFEST_BRANCH: twrp-11
+  MANIFEST: https://github.com/LineageOS/android.git
+  MANIFEST_BRANCH: lineage-19.1
   DEVICE: OP4F2F
   DT_LINK: https://github.com/Johx22/device_oppo_OP4F2F
   DT_PATH: device/oppo/OP4F2F
@@ -51,12 +51,12 @@ jobs:
              cd work
              repo init -u $MANIFEST -b $MANIFEST_BRANCH --depth=1 --groups=all,-notdefault,-device,-darwin,-x86,-mips
              repo sync -j4
-             git clone $DT_LINK -b fox_11.0 --depth=1 --single-branch $DT_PATH
+             git clone $DT_LINK --depth=1 --single-branch $DT_PATH
 
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&export LC_ALL="C" &&lunch twrp_$DEVICE-eng &&export ALLOW_MISSING_DEPENDENCIES=true && mka $TARGET
+              . build/envsetup.sh &&lunch lineage_$DEVICE-eng &&mka $TARGET
 
        - uses: actions/upload-artifact@v2
          with:
