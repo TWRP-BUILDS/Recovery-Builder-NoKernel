@@ -15,7 +15,7 @@ on:
 
 env:
   MANIFEST: https://github.com/PitchBlackRecoveryProject/manifest_pb.git
-  MANIFEST_BRANCH: android-9.0
+  MANIFEST_BRANCH: android-8.1
   DEVICE: j4lte
   DT_LINK: https://github.com/Johx22/android_device_samsung_j4lte-pbrp
   DT_PATH: device/samsung/j4lte
