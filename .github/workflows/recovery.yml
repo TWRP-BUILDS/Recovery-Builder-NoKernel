@@ -14,7 +14,7 @@ on:
     types: [started]
 
 env:
-  MANIFEST: repo init -u https://gitlab.com/OrangeFox/Manifest.git
+  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
   MANIFEST_BRANCH: fox_9.0
   DEVICE: j4lte
   DT_LINK: https://github.com/Johx22/android_device_samsung_j4lte -b fox_9.0
