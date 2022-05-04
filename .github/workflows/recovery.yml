@@ -14,7 +14,7 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git 
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git
   MANIFEST_BRANCH: twrp-11
   DEVICE: OP4F2F
   DT_LINK: https://github.com/Johx22/device_oppo_OP4F2F -b android-10
@@ -25,8 +25,17 @@ env:
 jobs:
   build:
     runs-on: ubuntu-18.04
-    
+
     steps:
+       - name:
+         uses: easimon/maximize-build-space@v5
+         with:
+           root-reserve-mb: 1024
+           swap-size-mb: 6144
+           remove-dotnet: 'true'
+           temp-reserve-mb: 1024
+           remove-android: 'true'
+           remove-haskell: 'true'
        - name: Checkout
          uses: actions/checkout@master
 
