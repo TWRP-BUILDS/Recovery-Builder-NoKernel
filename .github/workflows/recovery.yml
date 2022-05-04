@@ -14,13 +14,13 @@ on:
     types: [started]
 
 env:
-  MANIFEST: https://gitlab.com/OrangeFox/Manifest.git
-  MANIFEST_BRANCH: fox_9.0
-  DEVICE: j4ltejx
-  DT_LINK: https://github.com/Johx22/android_device_samsung_j4lte -b fox_9.0
-  DT_PATH: device/samsung/j4ltejx
+  MANIFEST: https://github.com/minimal-manifest-twrp/platform_manifest_twrp_aosp.git 
+  MANIFEST_BRANCH: twrp-11
+  DEVICE: OP4F2F
+  DT_LINK: https://github.com/Johx22/device_oppo_OP4F2F -b android-10
+  DT_PATH: device/oppo/OP4F2F
   TARGET: recoveryimage
-  TZ: Asia/Kolkata
+  TZ: Asia/Shanghai
 
 jobs:
   build:
