@@ -62,11 +62,12 @@ jobs:
              repo sync -j4
              git clone $DT_LINK --depth=1 --single-branch $DT_PATH
              git clone https://gitlab.com/OrangeFox/misc/theme.git bootable/recovery/gui/theme
+             
 
        - name: Build
          run: |
               cd work
-              . build/envsetup.sh &&lunch twrp_$DEVICE-eng &&mka $TARGET
+              . build/envsetup.sh &&lunch omni_$DEVICE-eng &&mka $TARGET
 
        - uses: actions/upload-artifact@v2
          with:
